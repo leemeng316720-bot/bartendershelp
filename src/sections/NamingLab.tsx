@@ -149,7 +149,7 @@ export default function NamingLab({ data, selectedDrinkId, onSelectDrink, onUpda
           <Field label="灵感来源">
             <input value={free.inspiration} onChange={(e) => setFree((f) => ({ ...f, inspiration: e.target.value }))} className={inputCls} placeholder="那首歌、那部电影…" />
           </Field>
-          <Field label="想走的感觉">
+          <Field label="想呈现的感觉">
             <input value={free.feeling} onChange={(e) => setFree((f) => ({ ...f, feeling: e.target.value }))} className={inputCls} placeholder="东方海岛的清晨" />
           </Field>
         </div>

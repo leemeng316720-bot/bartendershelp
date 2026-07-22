@@ -98,7 +98,7 @@ export default function QuickCapture({ onSave }: Props) {
             className={inputCls}
           />
         </Field>
-        <Field label="想走的感觉">
+        <Field label="想呈现的感觉">
           <textarea
             value={form.feeling}
             onChange={set('feeling')}

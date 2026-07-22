@@ -200,7 +200,7 @@ export default function DrinkDetail({ drink, data, onBack, onUpdate, onDelete, o
         <Field label="灵感来源">
           <textarea value={d.inspiration} onChange={(e) => patch({ inspiration: e.target.value })} rows={2} className={inputCls} />
         </Field>
-        <Field label="想走的感觉">
+        <Field label="想呈现的感觉">
           <textarea value={d.feeling} onChange={(e) => patch({ feeling: e.target.value })} rows={2} className={inputCls} />
         </Field>
       </div>

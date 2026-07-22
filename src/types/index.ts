@@ -21,7 +21,7 @@ export interface Drink {
   flavorTags: string[]
   /** 灵感来源：那首歌、那部电影、那个晚上的月光 */
   inspiration: string
-  /** 想走的感觉 */
+  /** 想呈现的感觉 */
   feeling: string
   /** 最终文案 / 故事 */
   story: string

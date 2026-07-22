@@ -61,7 +61,7 @@ export async function generateNamings(
     drink.ratio && `比例：${drink.ratio}`,
     drink.flavorTags?.length && `风味关键词：${drink.flavorTags.join('、')}`,
     drink.inspiration && `灵感来源：${drink.inspiration}`,
-    drink.feeling && `想走的感觉：${drink.feeling}`,
+    drink.feeling && `想呈现的感觉：${drink.feeling}`,
     extraNote && `补充说明：${extraNote}`,
   ]
     .filter(Boolean)
