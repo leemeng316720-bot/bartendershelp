@@ -34,7 +34,7 @@ async function chat(ai: AISettings, system: string, user: string): Promise<strin
     },
     body: JSON.stringify({
       model: ai.model,
-      temperature: 0.9,
+      // 不传 temperature：kimi-k3 等新模型只允许默认值 1
       messages: [
         { role: 'system', content: system },
         { role: 'user', content: user },
