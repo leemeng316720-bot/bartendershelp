@@ -7,7 +7,7 @@ export const uid = () => Math.random().toString(36).slice(2, 10) + Date.now().to
 export const DEFAULT_AI: AISettings = {
   apiKey: '',
   baseUrl: 'https://api.moonshot.cn/v1',
-  model: 'moonshot-v1-8k',
+  model: 'kimi-k3',
 }
 
 export const DEFAULT_PREFS: Prefs = {
@@ -144,6 +144,10 @@ export function loadData(): AppData {
     if (raw) {
       const d = JSON.parse(raw) as AppData
       const merged = { ...d, ai: { ...DEFAULT_AI, ...d.ai }, prefs: { ...DEFAULT_PREFS, ...d.prefs } }
+      // 迁移：moonshot-v1 系列已于 2026-08-31 下线，自动切到 kimi-k3
+      if (merged.ai.model.startsWith('moonshot-v1')) {
+        merged.ai.model = DEFAULT_AI.model
+      }
       // 迁移：为早期版本的示例酒补照片
       const seedPhotos: Record<string, string> = {
         午夜巴黎: '/seed/midnight-paris.jpg',
